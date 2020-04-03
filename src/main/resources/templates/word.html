@@ -6,7 +6,7 @@
     <style type="text/css">
         .bg {
             color: #fff;
-            background-color: #559e68;
+            background-color: #719AD2;
         }
 
         table {
@@ -98,7 +98,7 @@
                 </tr>
                 <tr>
                     <td>返回类型</td>
-                    <td colspan="4" th:text="${table.responseForm}"></td>
+                    <td colspan="4" th:text="${table.responseForm}=='*/*' ? 'application/json':${table.responseForm}"></td>
                 </tr>
 
                 <tr class="bg" align="center">
@@ -126,17 +126,17 @@
 
                 </th:block>
 
-                <tr class="bg" align="center">
-                    <td>状态码</td>
-                    <td colspan="2">描述</td>
-                    <td colspan="2">说明</td>
-                </tr>
+<!--                <tr class="bg" align="center">-->
+<!--                    <td>状态码</td>-->
+<!--                    <td colspan="2">描述</td>-->
+<!--                    <td colspan="2">说明</td>-->
+<!--                </tr>-->
 
-                <tr align="center" th:each="response:${table.responseList}">
-                    <td th:text="${response.name}"></td>
-                    <td colspan="2" th:text="${response.description}"></td>
-                    <td colspan="2" th:text="${response.remark}"></td>
-                </tr>
+<!--                <tr align="center" th:each="response:${table.responseList}">-->
+<!--                    <td th:text="${response.name}"></td>-->
+<!--                    <td colspan="2" th:text="${response.description}"></td>-->
+<!--                    <td colspan="2" th:text="${response.remark}"></td>-->
+<!--                </tr>-->
 
                 <tr class="bg" align="center">
                     <td>返回属性名</td>
